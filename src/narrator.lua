@@ -95,7 +95,7 @@ function Narrator:nextDialogue()
   self.dialogue_x_position = love.math.random(8, 16)
   self.dialogue_y_position = love.math.random(68, 80)
   self.dialogue_counter = self.dialogue_counter + 1
-  if PLAYER.high_score < 12000 then
+  if PLAYER.high_score < 6000 then
     if Dialogue["low_" .. self.dialogue_counter] then
       self.dialogue = Dialogue["low_" .. self.dialogue_counter]
     else

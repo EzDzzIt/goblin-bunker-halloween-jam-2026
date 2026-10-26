@@ -254,7 +254,7 @@ function Grid:addEye(row, col)
   if self.bones_enabled then
     if self.bone_count == 0 then
       addBone = true
-    elseif self.bone_count <= 6 then
+    elseif self.bone_count <= 12 then
       if love.math.random(0, 100) > 85 then
         addBone = true
       end
@@ -282,7 +282,7 @@ function Grid:doHex(row, col)
       end
     end
   end
-  Sound:playSFX("hex_triggered", 2)
+  Sound:playSFX("hex_triggered", 0.5, love.math.random(-1, 1))
   if self:checkGridForMatches() then
     self:doMatch()
   end

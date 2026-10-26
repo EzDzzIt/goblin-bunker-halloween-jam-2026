@@ -53,14 +53,14 @@ end
 
 function UI:drawIntroButts()
   Start_Button:draw()
-  if PLAYER.high_score > 12000 then
+  if PLAYER.high_score > 6000 then
     Start_Bones_Button:draw()
   end
 end
 
 function UI:updateIntro(dt)
   Start_Button:update(dt)
-  if PLAYER.high_score > 12000 then
+  if PLAYER.high_score > 6000 then
     Start_Bones_Button:update(dt)
   end
 end
